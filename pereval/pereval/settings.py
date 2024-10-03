@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'pereval_api',
 ]
 
 MIDDLEWARE = [
@@ -57,11 +58,11 @@ WSGI_APPLICATION = 'pereval.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('FSTR_DB_LOGIN'),
+        'PASSWORD': os.getenv('FSTR_DB_PASS'),
+        'HOST': os.getenv('FSTR_DB_HOST'),
+        'PORT': os.getenv('FSTR_DB_PORT'),
     },
 }
 
