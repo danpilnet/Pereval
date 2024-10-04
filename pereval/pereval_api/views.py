@@ -17,6 +17,6 @@ class PerevalApiView(viewsets.ModelViewSet):
     queryset = Pereval
     serializer_class = PerevalSerializers
 
-class Coordinates(viewsets.ModelViewSet):
+class CoordinatesApiView(viewsets.ModelViewSet):
     queryset = Coordinates
     serializer_class = CoordinatesSerializers
