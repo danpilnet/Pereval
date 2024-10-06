@@ -18,8 +18,9 @@ class StatusApiView(viewsets.ModelViewSet):
 
 class PerevalApiView(viewsets.ModelViewSet):
 
-    queryset = Pereval
+    queryset = Pereval.objects.all()
     serializer_class = PerevalSerializers
+    filterset_fields = ('user__email',)
 
     def create(self, request, *args, **kwargs):
 
