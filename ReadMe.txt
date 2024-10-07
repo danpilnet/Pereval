@@ -45,3 +45,4 @@ DATABASES = {
 
 
 -Запустить проект: python manage.py runserver
+
